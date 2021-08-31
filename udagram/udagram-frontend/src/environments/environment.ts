@@ -4,8 +4,12 @@
 
 export const environment = {
   production: false,
-  appName: 'Udagram',
-  apiHost: 'http://localhost:8080/api/v0'
+  appName: "Udagram",
+  // apiHost:  "http://Udagramhosting-env.eba-m8gqqbec.us-east-1.elasticbeanstalk.com/api/v0",
+  apiHost: "http://localhost:8080/api/v0",
+  // apiHost: "udagram-db.cexcbulgmzhw.us-east-1.rds.amazonaws.com",
+  // apiHost:
+  //   "1udagramebsmainupdated-env.eba-aiqpbufj.us-east-1.elasticbeanstalk.com/api/v0",
 };
 
 /*
