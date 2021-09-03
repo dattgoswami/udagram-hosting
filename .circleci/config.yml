@@ -37,7 +37,7 @@ jobs:
             npm run frontend:install
             npm run frontend:build
       - run:
-          name: Clear previous build from the frontend bucket
+          name: Clear previous build from the S3 bucket
           command: |
             npm run frontend:clearBucket
       - run:
