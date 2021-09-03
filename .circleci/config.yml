@@ -46,5 +46,6 @@ jobs:
             npm run frontend:deploy
 workflows:
   udagram_api_frontend_deployment:
-    - udagram_api
-    - udagram_frontend
+    jobs:
+      - udagram_api
+      - udagram_frontend
