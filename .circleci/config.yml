@@ -9,7 +9,7 @@ jobs:
       - image: "cimg/base:stable"
     steps:
       - node/install
-        node_version: 12.22.5
+        node-version: 12.22.5
       - checkout
       - eb/setup
       - run:
