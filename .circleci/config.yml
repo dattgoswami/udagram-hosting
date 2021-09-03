@@ -13,14 +13,15 @@ jobs:
       - checkout
       - eb/setup
       - run:
-          name: Installing and building the Udagram's backend
+          name: Installing and building Udagram's backend
           command: |
             npm run backend:install
             npm run backend:build
       - run:
-          name: Deploying the Udagram backend to Elastic Beanstalk
+          name: Deploying Udagram's backend to Elastic Beanstalk
           command: |
             cd udagram-api
+            eb init --region us-east-1 --platform node.js-12 udagram-api-server
             eb use Udagramapiserver-env
             eb setenv AWS_ACCESS_KEY=$AWS_ACCESS_KEY_ID AWS_BUCKET=$AWS_BUCKET AWS_REGION=$AWS_DEFAULT_REGION AWS_SECRET=$AWS_SECRET_ACCESS_KEY JWT_SECRET=$JWT_SECRET POSTGRES_DB=$POSTGRES_DB POSTGRES_HOST=$POSTGRES_HOST POSTGRES_PASSWORD=$POSTGRES_PASSWORD POSTGRES_PORT=$POSTGRES_PORT POSTGRES_USERNAME=$POSTGRES_USERNAME 
             npm run backend:deploy
@@ -32,7 +33,7 @@ jobs:
       - checkout
       - aws-cli/setup
       - run:
-          name: Install and building the Udagram's frontend
+          name: Install and building Udagram's frontend
           command: |
             npm run frontend:install
             npm run frontend:build
