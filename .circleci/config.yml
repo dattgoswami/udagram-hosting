@@ -8,12 +8,12 @@ jobs:
     docker:
       - image: "cimg/base:stable"
     steps:
-      - node/install
-        node-version: 12.22.5
+      - node/install:
+          node-version: 12.22.5
       - checkout
       - eb/setup
       - run:
-          name: Installing and building the Udagram's backend 
+          name: Installing and building the Udagram's backend
           command: |
             npm run backend:install
             npm run backend:build
@@ -37,7 +37,7 @@ jobs:
             npm run frontend:install
             npm run frontend:build
       - run:
-          name: Clear previous build from the frontend bucket 
+          name: Clear previous build from the frontend bucket
           command: |
             npm run frontend:clearBucket
       - run:
