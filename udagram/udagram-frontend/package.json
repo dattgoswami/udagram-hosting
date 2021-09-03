@@ -6,11 +6,12 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy": "chmod +x bin/deploy.sh && bin/deploy.sh"
+    "deploy": "chmod +x bin/deploy.sh && bin/deploy.sh",
+    "clears3": "aws s3 rm s3://udagram-frontend-angular-4/ --recursive"
   },
   "private": true,
   "dependencies": {
@@ -31,11 +32,11 @@
     "zone.js": "~0.9.1"
   },
   "devDependencies": {
-    "@angular-devkit/architect": "^0.1202.3",
+    "@angular-devkit/architect": "^0.1202.4",
     "@angular-devkit/build-angular": "^0.803.24",
     "@angular-devkit/core": "~7.2.3",
     "@angular-devkit/schematics": "~7.2.3",
-    "@angular/cli": "~8.3.25",
+    "@angular/cli": "^8.3.25",
     "@angular/compiler": "~8.2.14",
     "@angular/compiler-cli": "~8.2.14",
     "@angular/language-service": "~8.2.14",
