@@ -12,9 +12,6 @@ jobs:
       - checkout
       - aws-cli/setup:
           profile-name: AWS_PROFILE
-          aws-access-key-id: AWS_ACCESS_KEY_ID
-          aws-secret-access-key: AWS_SECRET_ACCESS_KEY
-          aws-region: AWS_DEFAULT_REGION
       - eb/setup
       - run:
           name: Front-End Install
@@ -35,4 +32,4 @@ jobs:
       - run:
           name: Deploy Front-End
           command: |
-            aws s3 cp --recursive --acl public-read ./www s3://udagram-frontend-angular-4/
+            npm run frontend:deploy
