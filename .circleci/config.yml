@@ -41,7 +41,7 @@ jobs:
           name: Clear previous build from the S3 bucket
           command: |
           aws configure --profile $AWS_PROFILE
-            npm run frontend:clearBucket
+          npm run frontend:clearBucket
       - run:
           name: Deploying the Udagram frontend to S3
           command: |
