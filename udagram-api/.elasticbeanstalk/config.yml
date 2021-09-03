@@ -1,12 +1,12 @@
 branch-defaults:
   default:
-    environment: Masterudagram-env
+    environment: Ebsudagramenv-env
 environment-defaults:
-  Masterudagram-env:
+  Ebsudagramenv-env:
     branch: null
     repository: null
 global:
-  application_name: master-udagram
+  application_name: ebsudagram-env
   default_ec2_keyname: null
   default_platform: Node.js 12 running on 64bit Amazon Linux 2
   default_region: us-east-1
